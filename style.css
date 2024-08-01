@@ -263,7 +263,14 @@ video{
     margin-top: 4rem;
     
 }
-
+img{
+    box-sizing: border-box;
+    height: 20rem;
+    width: 30rem;
+    margin-left: 5rem;
+    margin-top: 4rem;
+    
+}
 .bacg-c{
     
     right: 0;
