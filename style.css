@@ -11,7 +11,8 @@ ul li{
     margin-left: 1rem;
     font-style: normal;
     font-weight: bolder;
-    
+    animation-delay: calc(.1s * var(--i));
+    animation: slideup 3s ease forwards; 
     color: red;
 
 }
@@ -23,9 +24,11 @@ ul {
 ul li:hover{
     cursor: pointer;
 }
+
 .png img{
     height: 3rem;
     margin-left: 3rem;
+    animation: slideright 3s ease forwards; 
 }
 body{
     height: 100%;
@@ -35,6 +38,9 @@ body{
     
     background-color: black;
     
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 ul a{
 text-decoration: none;
@@ -74,10 +80,14 @@ text-decoration: none;
     margin-left: 21.6rem;
     margin-top: -35rem;
    
+    
+}
+.mob img{
+    animation: slideupp 3s ease forwards; 
 }
 .mobd{
     height: 23.5rem ;
-   
+   opacity: 2;
     width: 11.5rem;
     background-color: black;
     margin-left: 8.15rem;
@@ -92,12 +102,7 @@ z-index: 4;
 margin-top: 2rem;
     margin-left: -10rem;
 }
-button1{
 
-}
-button2{
-
-}
 .mobd h1{
     display: flex;
    
@@ -234,6 +239,7 @@ text-align: center;
     }
     }
 .item{
+    animation: slideright 3s ease forwards; 
     margin-top: -15rem;
     padding: 5rem;
     background-color: black;
@@ -286,7 +292,7 @@ video{
 }
 .item2{
     margin-top: 9rem;
-   
+    animation: slideleft 3s ease forwards;
     padding-left: 30rem;
 }
 .item2 pre{
@@ -312,3 +318,34 @@ footer{
     text-align: center;
     
 }
+@keyframes slideright{
+    0%{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+   }
+   @keyframes slideleft{
+    0%{
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+   }   
+   @keyframes slideupp{
+    0%{
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    
+   }
